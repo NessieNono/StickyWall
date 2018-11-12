@@ -1,0 +1,37 @@
+/* Decorations for a single sticky note */
+
+.invisible-button { 
+    position: absolute;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    top: 2px;
+    right:8px;
+    width: 44px;
+    height: 18px;
+    z-index: 16;
+    cursor: pointer;
+    margin: 0px;
+ }
+
+
+.popup { 
+    /* always the same position on the post*/
+    width: 284px;
+    height:417px;
+    /* absolute means relative to parent */
+    position: absolute; 
+    bottom: 0px; left: -300px;
+    z-index: 5;
+
+    top: 0px;
+
+    /* based on boundaries of image */
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #4A444A;
+
+    background-image: url(../images/frames/frame1.png);
+    background-repeat: no-repeat;
+    display: none; 
+
+}

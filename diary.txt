@@ -1,5 +1,0 @@
-Monday 
-6:30 - conceived of idea 
-
-Single Page Application 
-Add and remove elements from the DOM as required.

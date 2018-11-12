@@ -18,9 +18,20 @@ const content2 = document.getElementById("item-2-content");
 function toggle_collapse1() { 
 	console.log("toggle_collapse1 executed")
 	content1.classList.toggle('hide');
+  if (exco1.innerHTML === "expand_less") { 
+    exco1.innerHTML = "expand_more";
+  } else { 
+    exco1.innerHTML = "expand_less";
+  }
+  
 }
 
 function toggle_collapse2() { 
 	console.log("toggle_collapse2 executed")
 	content2.classList.toggle('hide');
+  if (exco2.innerHTML === "expand_less") { 
+    exco2.innerHTML = "expand_more";
+  } else { 
+    exco2.innerHTML = "expand_less";
+  }
 }

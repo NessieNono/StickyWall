@@ -1,0 +1,19 @@
+{
+  "name": "sticky-wall",
+  "version": "1.0.0",
+  "description": "Single page web application for creating sticky notes, to remove clutter from your desktop.",
+  "main": "main.js",
+  "scripts": {
+    "start": "npx http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NessieNono/StickyWall.git"
+  },
+  "author": "Nessienono",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NessieNono/StickyWall/issues"
+  },
+  "homepage": "https://github.com/NessieNono/StickyWall#readme"
+}

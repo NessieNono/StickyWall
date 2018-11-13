@@ -1,7 +1,26 @@
 /* Decorations for a single sticky note */
 
+.note { 
+    /* always the same position on the post*/
+    width: 284px;
+    height:417px;
+    /* absolute means relative to parent */
+    position: absolute; 
+    z-index: 100;
+
+    top: 0px;
+
+    /* based on boundaries of image */
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #4A444A;
+
+    background-image: url("../images/frames/frame1.png");
+    background-repeat: no-repeat;
+}
+
 .invisible-button { 
-    position: absolute;
+    position: absolute; /* absolute means relative to parent */
     border: none;
     background-color: rgba(0,0,0,0);
     top: 2px;
@@ -14,24 +33,20 @@
  }
 
 
-.popup { 
-    /* always the same position on the post*/
-    width: 284px;
-    height:417px;
-    /* absolute means relative to parent */
-    position: absolute; 
-    bottom: 0px; left: -300px;
-    z-index: 5;
+.meta-data { 
+    font-family: "Source Sans Pro", "Sans-Serif"; 
+    font-size: 10pt;
+    color: black;
+    margin-top: 50px;
+    padding-left: 80px;
+    padding-right: 24px;
+    padding-top: 20px;
+    margin-bottom: 100px;
+    max-height: 260px;
+    overflow-y: scroll;
+}
 
-    top: 0px;
 
-    /* based on boundaries of image */
-    text-align: left;
-    font-family: 'IBM Plex Mono', monospace;
-    color: #4A444A;
-
-    background-image: url(../images/frames/frame1.png);
-    background-repeat: no-repeat;
+.meta-data::-webkit-scrollbar { 
     display: none; 
-
 }

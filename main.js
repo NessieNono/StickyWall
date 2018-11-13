@@ -1,37 +1,53 @@
-const exco1 = document.getElementById("item-1"); 
-const exco2 = document.getElementById("item-2"); 
-
-const content1 = document.getElementById("item-1-content"); 
-const content2 = document.getElementById("item-2-content"); 
+const main = document.getElementById("main"); 
 
 (function() {
-  'use strict';
-  content1.classList.toggle('hide');
-  content2.classList.toggle('hide');
-  // buttons are selected as exco1 and exco2 
-  // attach an event listener to them so that they will print "hello"
-  exco1.addEventListener("click", toggle_collapse1);
-  exco2.addEventListener("click", toggle_collapse2);
-
+	'use strict';
+	console.log("This is the Effy function.");
+	makeNote();
 }());
 
-function toggle_collapse1() { 
-	console.log("toggle_collapse1 executed")
-	content1.classList.toggle('hide');
-  if (exco1.innerHTML === "expand_less") { 
-    exco1.innerHTML = "expand_more";
-  } else { 
-    exco1.innerHTML = "expand_less";
-  }
-  
+
+function makeNote() { 
+	let note = createElement("div", "", {class: "note"});
+	let close_button = createElement("button", "", {class:"invisible-button"});
+	close_button.addEventListener("click", function() { 
+		//note.style.display = "none";
+	});
+
+
+
+
+
+	// fill in the note with some text 
+		// console.log(list); // [{author, published comment}, {}]
+    note.appendChild(createElement("p", "no one commented on this post yet.", {class: "meta-data"}));
+
+	note.appendChild(close_button);
+	main.appendChild(note);
+	console.log("created and appended note element");
+
+
 }
 
-function toggle_collapse2() { 
-	console.log("toggle_collapse2 executed")
-	content2.classList.toggle('hide');
-  if (exco2.innerHTML === "expand_less") { 
-    exco2.innerHTML = "expand_more";
-  } else { 
-    exco2.innerHTML = "expand_less";
-  }
+
+
+
+// ---------------------- Put in a diff Module ----------------------- //
+/**
+ * You don't have to use this but it may or may not simplify element creation
+ * 
+ * @param {string}  tag     The HTML element desired
+ * @param {any}     data    Any textContent, data associated with the element
+ * @param {object}  options Any further HTML attributes specified
+ */
+function createElement(tag, data, options = {}) {
+    const el = document.createElement(tag);
+    el.textContent = data;
+   
+    // Sets the attributes in the options object to the element
+    return Object.entries(options).reduce(
+        (element, [field, value]) => {
+            element.setAttribute(field, value);
+            return element;
+        }, el);
 }
